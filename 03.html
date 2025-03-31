@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CRM - Empresa especializada em restauração e pintura com excelência. Orçamentos rápidos e serviço de qualidade.">
+    <meta name="keywords"
+        content="restauração, pintura, serviços gerais, reformas, orçamento, qualidade, casa, empresa">
+    <title>CRM Paint & Restore</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+    <style>
+        /* Estilos base do site */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #030101;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #110f0f;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #d1d1d1;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgb(30, 32, 34);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(15, 7, 7, 0.1);
+        }
+
+        footer {
+            background-color: #060606;
+            color: #060606;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Carrossel de imagens e vídeos */
+        .gallery,
+        .videos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery img,
+        .videos iframe {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover,
+        .videos iframe:hover {
+            transform: scale(1.05);
+        }
+
+        .form input,
+        .form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #080808;
+            border-radius: 5px;
+        }
+
+        .form button {
+            background-color: #9b9999;
+            color: rgb(9, 8, 8);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form button:hover {
+            background-color: #0d0505;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .videos iframe {
+                height: 200px;
+                max-width: 100%;
+            }
+
+            .gallery img {
+                width: calc(50% - 20px);
+            }
+
+            .form input,
+            .form textarea {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery img {
+                width: 100%;
+            }
+
+            .videos iframe {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="york-header-1160x755.jpg" alt="Imagem de cabeçalho">
+        <h1>CRM Pintura & Restore</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#videos">Vídeos</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio">
+        <h2>Bem-vindo à CRM</h2>
+        <p>Oferecemos serviços de restauração e pintura com excelência. Entre em contato para um orçamento.</p>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <h2>Sobre a CRM</h2>
+        <p>A CRM é especializada em restauração e pintura de alta qualidade, oferecendo serviços para residências e
+            empresas, com foco na satisfação total do cliente.</p>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <h2>Serviços da CRM</h2>
+        <ul>
+            <li>Restauração de fachadas</li>
+            <li>Pintura interna e externa</li>
+            <li>Reformas de ambientes</li>
+            <li>Reparos em superfícies danificadas</li>
+        </ul>
+    </section>
+    <!-- Seção Galeria -->
+    <section id="galeria">
+        <h2>Galeria de fotos</h2>
+        <div class="gallery">
+            <img src="galeria fotos/20230518_100446.jpg" alt="Trabalho de restauração 1"
+                onclick="window.open(this.src, '_blank')">
+            <img src="galeria fotos/20230518_065728.jpg" alt="Trabalho de restauração 2"
+                onclick="window.open(this.src, '_blank')">
+            <img src="galeria fotos/20230705_080908.jpg" alt="Trabalho de restauração 3"
+                onclick="window.open(this.src, '_blank')">
+            <img src="galeria fotos/20231109_112002.jpg" alt="Trabalho"
+                onclick="window.open(this.src, '_blank')">
+            <img src="galeria fotos/20240103_164124.jpg" alt=""
+                onclick="window.open(this.src, '_blank')">
+            <img src="https://seuservidor.com/galeria-fotos/20230705_080902.jpg" alt=""
+                onclick="window.open(this.src, '_blank')">
+            <img src="https://seuservidor.com/galeria-fotos/20230718_152434.jpg" alt=""
+                onclick="window.open(this.src, '_blank')">
+            <img src="" alt=""
+                onclick="window.open(this.src, '_blank')">
+        </div>
+    </section>
+
+    <!-- Seção Vídeos -->
+    <section id="videos">
+        <h2>Vídeos de Nossos Trabalhos</h2>
+        <div class="videos">
+            <iframe src="https://seuservidor.com/galeria-fotos/20230718_152439.mp4" frameborder="0" allowfullscreen
+                onclick="window.open(this.src, '_blank')"></iframe>
+            <iframe src="https://seuservidor.com/galeria-fotos/20230927_153555.mp4" frameborder="0" allowfullscreen
+                onclick="window.open(this.src, '_blank')"></iframe>
+            <iframe src="https://seuservidor.com/galeria-fotos/20230921_095840.mp4" frameborder="0" allowfullscreen
+                onclick="window.open(this.src, '_blank')"></iframe>
+            <iframe src="https://seuservidor.com/galeria-fotos/20230727_154427.mp4" frameborder="0" allowfullscreen
+                onclick="window.open(this.src, '_blank')"></iframe>
+            <iframe src="https://seuservidor.com/galeria-fotos/20230518_065755.mp4" frameborder="0" allowfullscreen
+                onclick="window.open(this.src, '_blank')"></iframe>
+        </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="depoimentos">
+        <h2>O que nossos clientes dizem</h2>
+        <p>"Excelente trabalho! Fiquei muito satisfeito!" - João Silva</p>
+        <p>"A casa ficou linda após a pintura!" - Maria Souza</p>
+    </section>
+
+    <!-- Seção FAQ -->
+    <section id="faq">
+        <h2>Perguntas Frequentes</h2>
+        <p><strong>Quais serviços vocês oferecem?</strong><br> Restauração e pintura para diversos tipos de superfícies.
+        </p>
+        <p><strong>Como agendar um orçamento?</strong><br> Basta preencher o formulário abaixo ou nos chamar no
+            WhatsApp.</p>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Agende seu Orçamento</h2>
+        <form class="form" id="orcamento-form">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="telefone" placeholder="Telefone" required>
+            <textarea id="descricao" placeholder="Descreva o serviço desejado" required></textarea>
+            <button type="submit">Enviar Orçamento</button>
+        </form>
+    </section>
+
+    <footer>
+        <p><em>Contato: (51) 98648-5115 | Email: caiua0190@gmail.com</em></p>
+    </footer>
+
+    <!-- Scripts do Slick Carousel -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.gallery').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $('.videos').slick({
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
